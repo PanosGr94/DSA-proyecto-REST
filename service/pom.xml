@@ -84,6 +84,12 @@
             <version>5.1.36</version>
         </dependency>
 
+        <!--5.2-->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
