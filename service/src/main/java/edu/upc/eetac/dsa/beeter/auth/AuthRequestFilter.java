@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.security.Principal;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Properties;
 
 /**
  * Created by Panos on 09-Mar-16.
