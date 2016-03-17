@@ -30,9 +30,12 @@ public class Authorized {
         return instance;
     }
 
+
     public boolean isAuthorized(ContainerRequestContext requestContext) {
         String path = requestContext.getUriInfo().getPath();
         String method = requestContext.getMethod();
+        if(path.isEmpty() && method.equals("GET") && requestContext.getHeaderString("X-Auth-Token") == null)
+            return true;
         for(AuthorizedResource r : authorizedResourcesList){
             if(r.getPattern().matcher(path).matches() && r.getMethods().contains(method) )
                 return true;

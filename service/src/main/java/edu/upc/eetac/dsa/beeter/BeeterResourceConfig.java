@@ -1,5 +1,6 @@
 package edu.upc.eetac.dsa.beeter;
 
+import org.glassfish.jersey.linking.DeclarativeLinkingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 
@@ -14,6 +15,9 @@ public class BeeterResourceConfig extends ResourceConfig {
         packages("edu.upc.eetac.dsa.beeter.auth");
         //de 5.1
         register(RolesAllowedDynamicFeature.class);
+
+        //de 10 -> HateOAS
+        register(DeclarativeLinkingFeature.class);
     }
 
 }
