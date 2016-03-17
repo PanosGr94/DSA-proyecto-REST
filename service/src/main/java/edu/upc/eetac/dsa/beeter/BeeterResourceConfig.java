@@ -18,6 +18,9 @@ public class BeeterResourceConfig extends ResourceConfig {
 
         //de 10 -> HateOAS
         register(DeclarativeLinkingFeature.class);
+
+        //de 11-> Filtro Cors
+        packages("edu.upc.eetac.dsa.beeter.cors");
     }
 
 }
